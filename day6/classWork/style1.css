@@ -1,0 +1,118 @@
+#btn:hover{
+    width: 10%;
+    background-color: blueviolet;
+    border: none;
+    cursor: pointer;
+}
+
+::selection{
+    background-color: yellowgreen;
+
+}
+
+/* Apply styles to the first line of a paragraph */
+p::first-line {
+    color: blue;
+    font-weight: bold;
+  }
+  
+  /* Apply styles to the first letter of a paragraph */
+  p::first-letter {
+    font-size: 2em;
+    color: red;
+  }
+  
+  /* Apply styles to the part of an element that is selected by the user */
+  p::selection {
+    background: yellow;
+    color: black;
+  }
+  
+  /* Apply styles to the marker of a list item */
+  li::marker {
+    color: green;
+  }
+  
+  /* Apply styles to the placeholder text of an input field */
+  input::placeholder {
+    color: gray;
+    font-style: italic;
+  }
+  
+  /* Apply styles to the after content of an element */
+  h1::after {
+    content: '✨';
+    color: gold;
+  }
+  
+  /* Apply styles to the before content of an element */
+  h1::before {
+    content: '🚀';
+    color: silver;
+  }
+/* Apply styles to links when hovered */
+a:hover {
+    color: red;
+    text-decoration: underline;
+  }
+  
+  /* Apply styles to links when active */
+  a:active {
+    color: green;
+  }
+  
+  /* Apply styles to input fields when focused */
+  input:focus {
+    border: 2px solid blue;
+  }
+  
+  /* Apply styles to checked checkboxes or radio buttons */
+  input:checked {
+    background-color: yellow;
+  }
+  
+  /* Apply styles to disabled input fields */
+  input:disabled {
+    background-color: lightgray;
+  }
+  
+  /* Apply styles to the first child of an element */
+  ul li:first-child {
+    font-weight: bold;
+  }
+  
+  /* Apply styles to the last child of an element */
+  ul li:last-child {
+    font-style: italic;
+  }
+  
+  /* Apply styles to every other element (odd elements) */
+  tr:nth-child(odd) {
+    background-color: #721717;
+  }
+  
+  /* Apply styles to every even element */
+  tr:nth-child(even) {
+    background-color: #e6e6e6;
+  }
+  
+  /* Apply styles to elements that are not the first child */
+  p:not(:first-child) {
+    margin-top: 20px;
+  }
+  
+  /* Apply styles to elements on mouse over */
+  button:hover {
+    background-color: lightblue;
+  }
+  
+  /* Apply styles to elements when visited */
+  a:visited {
+    color: purple;
+  }
+  
+  /* Apply styles to elements when a sibling is hovered */
+  p:hover + p {
+    color: orange;
+  }
+    
