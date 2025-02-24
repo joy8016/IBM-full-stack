@@ -15,18 +15,16 @@
 
 // myfunction(a,b)
 
-// let a = 6
-// let b = 8
 
-// const myfunction=(a,b)=>{
-//     console.log(a+b)
-// }
+const myfunction=(a,b)=>{
+    console.log(a+b)
+}
 
-// console.log(name)
-// var name = "joy"
+console.log(name)
+var name = "joy"
 
-// let d = "10"
-// console.log(d.length()) 
+let d = "10"
+console.log(d.length()) 
 
 let b = 30, a =+ "20"
 console.log(b+a)
