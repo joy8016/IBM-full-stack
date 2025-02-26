@@ -90,13 +90,13 @@
 
 //question no 5: Convert this traditional function into an arrow function without changing the output. 
 
-const multiply = (a,b)=>{
+const multiplyy = (a,b)=>{
     return a* b;
 }
     
 
 
-console.log(multiply(4,4))
+console.log(multiplyy(4,4))
 
 
 //question no 6:What will be the output? Explain why.
@@ -145,3 +145,187 @@ var double = function(n) {
 
 console.log(square(5));
 console.log(double(4));
+
+
+
+// Section 5: 
+// Operators (Arithmetic, Assignment, Comparison, Logical)
+// 9 What will be the output of the following expressions?
+console.log(5 + "5"); //output : 55
+console.log(5 - "3"); //output : 2
+console.log(5 * "2"); //output : 55
+console.log("10" / 2); //output :5
+console.log(10 % "3");  //output :1
+// + with a string → Concatenation
+// Math operators (-, *, /, %) → Convert strings to numbers automatically
+
+
+
+
+
+// 10 Rewrite this code using shorthand assignment operators.
+let x = 10;
+x += 5;  // Equivalent to: x = x + 5;
+x *= 2;  // Equivalent to: x = x * 2;
+x -= 3;  // Equivalent to: x = x - 3;
+x /= 2;  // Equivalent to: x = x / 2;
+
+
+
+
+
+// 11 What will be logged in the console? Explain why.
+console.log(5 > 3 && 10 < 20); // if both conditions are true then it return  true
+console.log(5 > 3 || 10 > 20); // if at least one condition is true then it return true
+console.log(!(5 > 3));  // negates the truth value.
+
+
+
+
+
+//  Section 6: Function Parameters vs Arguments
+// 12.  What will be the output of the following function?
+function sum(a, b, c = 5) {
+    return a + b + c;
+}
+console.log(sum(2, 3));  // output : 10
+console.log(sum(2, 3, 10)); // output : 15
+
+
+
+
+
+
+
+// 13. Write a function that takes any number of arguments and returns their sum
+function sum(...numbers) {
+    return numbers.reduce((total, num) => total + num, 0);
+}
+
+// Example usage:
+console.log(sum(1, 2, 3));       // Output: 6
+console.log(sum(10, 20, 30, 40)); // Output: 100
+console.log(sum());              // Output: 0
+
+
+
+
+
+//14 Fix the following function to work correctly and explain the issues.
+function outer() {
+    let count = 0;
+    return function inner() {
+        count++;
+        console.log(count);
+    };
+}
+const counter1 = outer();
+counter1();
+counter1();
+const counter2 = outer();
+counter2();
+counter2();
+//No Issues Found
+
+
+
+
+
+
+// ##Some statement questions:
+
+// 1. Number Reversal without Using Built-in Methods
+//  Problem:
+// Write a function reverseNumber(num) that takes a number and returns its reverse.
+// Example:
+// reverseNumber(1234); // Output: 4321
+// reverseNumber(-567); // Output: -765
+//  Hint: Convert the number to a string manually and reverse it
+
+function reverseNumber(num) {
+    let rev = 0;
+    let negative = num < 0;
+    num = Math.abs(num);
+
+    while (num > 0) {
+        rev = rev * 10 + (num % 10);
+        num = Math.floor(num / 10);
+    }
+
+    return negative ? -rev : rev;
+}
+
+// Example usage:
+console.log(reverseNumber(1234));  // 4321
+console.log(reverseNumber(-567));  // -765
+
+
+
+
+
+
+
+
+// 2. Custom Length Function
+// Problem:
+// Create a function customLength(str) that returns the length of a string without using length
+// property.
+// Example:
+// customLength("JavaScript"); // Output: 10
+function customLength(str) {
+    let count = 0;
+    for (let char of str) {
+        count++; // Increase count for each character
+    }
+    return count;
+}
+console.log(customLength("JavaScript")); // Output: 10
+
+
+
+
+// 3. Avoid Hoisting Bug
+//  Problem:
+// Fix the bug in the following code without changing the function calls.
+console.log(add(2, 3)); // Should output: 5
+function add(a, b) {
+    return a + b;
+}
+var multiply = function (a, b) {
+    return a * b;
+};
+console.log(multiply(2, 3));
+// Should output: 6
+
+
+
+
+
+// 4 Function That Returns Another Function
+//  Problem:
+// Write a function counter() that returns another function. Each time the returned function is called, it
+// should increase a count and return it.
+//  Hint: Use closures
+// Example:
+// const count = counter();
+// console.log(count()); // Output: 1
+// console.log(count()); // Output: 2
+// console.log(count()); // Output: 3
+
+
+
+
+
+function counter() {
+    let count = 0;  // Private variable
+
+    return function () {
+        count++;  // Increment count
+        return count;
+    };
+}
+// Example usage:
+const count = counter();
+console.log(count()); // Output: 1
+console.log(count()); // Output: 2
+console.log(count()); // Output: 3
