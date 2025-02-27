@@ -24,25 +24,25 @@ form.addEventListener("submit", (joy)=>{
     td1.innerText=obj.name;
 
     let td2 = document.createElement("td")
-    td1.innerText=obj.email;
+    td2.innerText=obj.email;
 
     let td3 = document.createElement("td")
-    td1.innerText=obj.number;
+    td3.innerText=obj.number;
 
     let td4 = document.createElement("td")
-    td1.innerText=obj.password;
+    td4.innerText=obj.password;
 
     let td5 = document.createElement("td")
-    td1.innerText=obj.confirmpassword;
+    td5.innerText=obj.confirmpassword;
 
     tr.append(td1, td2, td3, td4, td5);
 
     document.getElementById("tbody").append(tr);
 
-    document.getElementById("name").value;
-    document.getElementById("email").value;
-    document.getElementById("number").value;
-    document.getElementById("password").value;
-    document.getElementById("confirmpassword").value;
+    document.getElementById("name").value = " ";
+    document.getElementById("email").value = " ";
+    document.getElementById("number").value = " ";
+    document.getElementById("password").value = " ";
+    document.getElementById("confirmpassword").value = " ";
 
 });
